@@ -52,7 +52,8 @@ sql_create_played_table = """ CREATE TABLE IF NOT EXISTS played (
                                             title text NOT NULL,
                                             artist text,
                                             spotifyId text,
-                                            playedDate date
+                                            playedDate date,
+                                            UNIQUE (spotifyId,playedDate)
                                         ); """    
     
 sql_drop_played_table = """ DROP TABLE played """    
